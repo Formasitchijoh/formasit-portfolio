@@ -20,7 +20,7 @@ const HomePage = () => {
   const projectImages = ["/construction.PNG", "/home.JPG"];
   return (
     <main className=" bg-[#1E1917] md:pb-10 md:px-[5%]">
-      <section className="w-full h-[100vh] flex flex-col-reverse justify-center items-center md:flex-row gap-2 ">
+      <section className="w-full h-[80vh] md:h-[100vh] flex flex-col-reverse justify-center items-center md:flex-row gap-2 ">
         <div
           id="intro-text"
           className=" px-[5%] md:px-0 w-full h-full md:w-1/2 mt-2 hidden  md:flex flex-col  justify-center gap-5 items-start"
@@ -52,16 +52,16 @@ const HomePage = () => {
           id="user"
           className=" w-full md:w-1/2 h-full  md:h-full flex flex-col justify-start mt-20 items-end"
         >
-          <p className=" hidden md:inline-block w-[80%] justify-start -mb-[10%] absolute md:relative md:-mb-0  items-start text-[49px] md:text-[64px] text-[#D2BEA5]">
+          <p className=" hidden md:inline-block w-[80%] justify-start -mb-[50%] absolute md:relative md:-mb-0  items-start text-[49px] md:text-[64px] text-[#D2BEA5]">
             FRONTEND
           </p>
           <div
-            className="w-[100%]  relative md:w-[100%] h-[80vh] sm:h-[100vh] md:h-[52vh] bg-no-repeat bg-cover"
+            className="w-[100%]  relative md:w-[100%] h-[80vh]  sm:h-[100vh] md:h-full bg-no-repeat bg-cover"
             style={{ backgroundImage: "url(/formasit.png)" }}
           >
             <div
               id="mobile-screen"
-              className=" px-[5%] bg-[#1E1917] bg-opacity-50 md:bg-opacity-10 md:hidden w-full h-full flex flex-col justify-between items-start"
+              className=" px-[5%]  bg-[#1E1917] bg-opacity-50 md:bg-opacity-10 md:hidden w-full h-full flex flex-col justify-between items-start"
             >
               <p className="inline-block w-[80%]  text-[49px]  text-[#D2BEA5]">
                 FRONTEND
@@ -96,7 +96,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="w-full  mb-[40%]  md:mb-[30%] md:mt-[10%] justify-start  items-start flex flex-col md:justify-center md:items-center px-[5%]">
+      <section className="w-full pb-[40%] pt-[40%] md:pt-[20%] justify-start  items-start flex flex-col md:justify-center md:items-center px-[5%]">
         <div className="flex w-full mb-10  place-content-center">
           <h2 className=" text-[64px] text-white ">I AM</h2>
         </div>
@@ -126,7 +126,7 @@ const HomePage = () => {
           <ProductPage image="construction.PNG" />
           <ProductPage image="home.JPG" />
         </div>
-        <div className="flex w-full justify-end items-start py-2 h-[20vh]">
+        <div className="flex animate-bounce w-full justify-end items-center py-2 h-[20vh]">
           <ViewMore />
         </div>
       </div>

@@ -32,3 +32,27 @@ export const servicedata = [
        product and eventually boast your business",
   },
 ];
+
+export const projects = [
+  {
+    title: "Construction Marketplace",
+    image: "",
+    category: "UI/UX",
+    description:
+      "An all in one market for finding everything related to construction be it",
+  },
+  {
+    title: "Construction Marketplace",
+    image: "",
+    category: "UI/UX",
+    description:
+      "An all in one market for finding everything related to construction be it",
+  },
+  {
+    title: "Construction Marketplace",
+    image: "",
+    category: "UI/UX",
+    description:
+      "An all in one market for finding everything related to construction be it",
+  },
+];

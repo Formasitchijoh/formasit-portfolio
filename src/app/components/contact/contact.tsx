@@ -1,18 +1,25 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
+import { roboto, roboto_condensed } from "@/app/utils/fonts";
 const Contact = () => {
   return (
-    <section className="w-[80vw] mt-[10% mx-auto md:py-10 ">
+    <section className="w-[80vw] pt-[20%] mx-auto md:py-10 ">
       <div className="flex w-full place-content-center">
-        <p className=" text-white text-[32px]  md:text-[64px] ">LETS CONNECT</p>
+        <p
+          className={`text-white text-[32px]  md:text-[64px] ${roboto_condensed.className}`}
+        >
+          LETS CONNECT
+        </p>
       </div>
       <div
         id="contact"
         className="grid w-[80vw] mx-auto md:grid-cols-2  md:my-12 py-4 gap-8 relative"
       >
-        <div className="z-10 md:w-2/3">
-          <p className="text-[#ADB7BE] md:text-[24px] mb-4 max-md">
+        <div className="z-10 w-full md:w-2/3">
+          <p
+            className={`text-white md:text-[16px] text-[12px]  mb-4 ${roboto.className}`}
+          >
             ARE YOU INTERESTED IN WORKING WITH ME OR JUST WANT TO SAY HI
           </p>
         </div>
@@ -21,7 +28,7 @@ const Contact = () => {
             <div className="mb-6">
               <label
                 htmlFor="email"
-                className="text-white block mb-2 text-sm font-medium"
+                className={`text-white block mb-2 text-sm font-medium ${roboto.className}`}
                 typeof="email"
               >
                 Your Email
@@ -38,7 +45,7 @@ const Contact = () => {
             <div className="mb-6">
               <label
                 htmlFor="subject"
-                className="text-white block mb-2 text-sm font-medium"
+                className={`text-white block mb-2 text-sm font-medium ${roboto.className}`}
                 typeof="subject"
               >
                 Subject
@@ -66,7 +73,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="bg-[#D87C4F] hover:bg-[#D87C4F] text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              className={`bg-[#D87C4F] hover:bg-[#D87C4F] ${roboto.className} text-white font-medium py-2.5 px-5 rounded-lg w-full`}
             >
               Send To Me
             </button>
