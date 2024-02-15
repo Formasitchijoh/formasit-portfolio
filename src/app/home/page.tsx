@@ -10,6 +10,7 @@ import Hobbies from "../components/hobby/hobbies";
 import Contact from "../components/contact/contact";
 import { TypeAnimation } from "react-type-animation";
 import ViewMore from "../components/Buttons/viewMore";
+import BlogPost from "../components/blog/blog";
 const HomePage = () => {
   const socialIcons = [
     { icon: "/icons/github.png", name: "github" },
@@ -18,6 +19,7 @@ const HomePage = () => {
   ];
 
   const projectImages = ["/construction.PNG", "/home.JPG"];
+  const blogImages = ["/course1.jpg", "/course2.jpg", "/cat8.jpg"];
   return (
     <main className=" bg-[#1E1917] md:pb-10 md:px-[5%]">
       <section className="w-full h-[80vh] md:h-[100vh] flex flex-col-reverse justify-center items-center md:flex-row gap-2 ">
@@ -130,6 +132,16 @@ const HomePage = () => {
           <ViewMore />
         </div>
       </div>
+      <section className="w-full mt-[5%] px-5">
+        <div className="flex w-full py-3 place-content-center">
+          <p className=" text-[64px] text-white ">INTERESTS</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-5">
+          {blogImages.map((image, index) => (
+            <BlogPost image={image} key={index} />
+          ))}
+        </div>
+      </section>
       <Hobbies />
       <Contact />
     </main>

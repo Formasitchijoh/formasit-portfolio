@@ -4,7 +4,7 @@ import { BsLinkedin } from "react-icons/bs";
 import { roboto, roboto_condensed } from "@/app/utils/fonts";
 const Contact = () => {
   return (
-    <section className="w-[80vw] pt-[20%] mx-auto md:py-10 ">
+    <section className="w-[80vw] will-change-transform pt-[20%] mx-auto md:py-10 ">
       <div className="flex w-full place-content-center">
         <p
           className={`text-white text-[32px]  md:text-[64px] ${roboto_condensed.className}`}
