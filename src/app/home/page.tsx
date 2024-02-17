@@ -135,7 +135,7 @@ const HomePage = () => {
       </div>
       <section className="w-full mt-[5%] px-5">
         <div className="flex w-full py-3 place-content-center">
-          <p className=" text-[64px] text-white ">INTERESTS</p>
+          <p className=" md:text-[64px] text-[32px] text-white ">INTERESTS</p>
         </div>
         <div className=" grid md:grid-cols-3 gap-5">
           {BlogData.slice(0, 3).map((blog, index) => (
