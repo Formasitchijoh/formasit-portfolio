@@ -136,7 +136,7 @@ const HomePage = () => {
         <div className="flex w-full py-3 place-content-center">
           <p className=" text-[64px] text-white ">INTERESTS</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className=" grid md:grid-cols-3 gap-5">
           {blogImages.map((image, index) => (
             <BlogPost image={image} key={index} />
           ))}

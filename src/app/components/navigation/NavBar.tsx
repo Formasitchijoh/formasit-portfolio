@@ -36,7 +36,7 @@ const NavBar = () => {
           </div>
         </button>
       </nav>
-      <hr className="mt-2 hidden md:block" />
+      {/* <hr className="mt-2 hidden md:block" /> */}
       {showMenu && <NavMenu setShowMenu={setShowMenu} />}
     </header>
   );

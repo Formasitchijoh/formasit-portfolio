@@ -3,8 +3,12 @@ import { ProjectEntity } from "../utils/entities";
 import { roboto, roboto_condensed } from "../utils/fonts";
 import ProductPage, { Project } from "../components/products/product";
 import { projects } from "../utils/data";
+import { Todo } from "../utils/Schema";
 
 const Projects = () => {
+  const todo = Todo.find();
+  console.log(todo);
+
   return (
     <main className=" bg-[#1E1917] md:pb-10 md:px-[5%]">
       <section
