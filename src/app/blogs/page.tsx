@@ -1,8 +1,16 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { roboto_condensed } from "../utils/fonts";
 import BlogPost from "../components/blog/blog";
 import ViewMore from "../components/Buttons/viewMore";
+import { BlogData } from "../utils/data";
+import BlogTag from "../components/tag/blogTag";
 const Blogs = () => {
+  const [tag, setTag] = useState("Technology");
+  const handleTagChange = (newTag: string) => {
+    setTag(newTag);
+  };
+  const filteredBlog = BlogData.filter((blog) => blog.tag.includes(tag));
   const blogImages = ["/course1.jpg", "/course2.jpg", "/cat8.jpg"];
   const blogCategory = [
     "LifeStyle",
@@ -28,17 +36,22 @@ const Blogs = () => {
       </div>
       <div className="bg-[#1E1917] flex py-[5%] flex-wrap justify-center w-[70%] gap-3 mx-auto md:w-full md:gap-10 items-center h-full  bg-opacity-40">
         {blogCategory.map((category, index) => (
-          <button
+          <BlogTag
+            onClick={handleTagChange}
+            tag={category}
+            isSelected={tag === category}
             key={index}
-            className="p-[5px] justify-items-center bg-[#382e29] hover:bg-[#D2BEB5] items-center rounded-full text-white border-2 border-[#D2BEB5]"
-          >
-            {category}
-          </button>
+          />
         ))}
       </div>
       <div className="grid w-[90%] mx-auto md:w-full md:grid-cols-3 gap-5">
-        {blogImages.map((image, index) => (
-          <BlogPost image={image} key={index} />
+        {filteredBlog.map((blog, index) => (
+          <BlogPost
+            key={index}
+            image={blogImages[index]}
+            title={blog.title}
+            description={blog.description}
+          />
         ))}
       </div>
       <div className=" w-full py-[20%] block justify-center items-center">

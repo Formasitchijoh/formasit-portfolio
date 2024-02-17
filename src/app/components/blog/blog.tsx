@@ -8,8 +8,10 @@ import {
 
 type BlogEntity = {
   image: string;
+  title?: string;
+  description?: string;
 };
-const BlogPost = ({ image }: { image: string }) => {
+const BlogPost = ({ image, title, description }: BlogEntity) => {
   return (
     <main
       className={`bg-[#8a756c] rounded-tr-2xl rounded-bl-2xl group/link hover:bg-[#b6aaa5] ${roboto.className} flex flex-col  bg-opacity-30 p-[2%]`}
@@ -22,11 +24,10 @@ const BlogPost = ({ image }: { image: string }) => {
       ></div>
 
       <h1 className="text-[16px] group-hover/link:text-[#1E1917] text-white pt-2">
-        Getting into Tech
+        {title}
       </h1>
       <p className="text-[10px] group-hover/link:text-[#1E1917] py-2 text-white ">
-        The introduction of Hooks made it easy for developers to add
-        statefulness without needing a container component to provide that state
+        {description}
       </p>
       <hr className="bg-[#D2BEB5] " />
       <div className="flex justify-between items-center py-2 w-full  ">

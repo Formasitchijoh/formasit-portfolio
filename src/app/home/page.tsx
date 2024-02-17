@@ -11,6 +11,7 @@ import Contact from "../components/contact/contact";
 import { TypeAnimation } from "react-type-animation";
 import ViewMore from "../components/Buttons/viewMore";
 import BlogPost from "../components/blog/blog";
+import { BlogData } from "../utils/data";
 const HomePage = () => {
   const socialIcons = [
     { icon: "/icons/github.png", name: "github" },
@@ -137,8 +138,13 @@ const HomePage = () => {
           <p className=" text-[64px] text-white ">INTERESTS</p>
         </div>
         <div className=" grid md:grid-cols-3 gap-5">
-          {blogImages.map((image, index) => (
-            <BlogPost image={image} key={index} />
+          {BlogData.slice(0, 3).map((blog, index) => (
+            <BlogPost
+              key={index}
+              image={blogImages[index]}
+              title={blog.title}
+              description={blog.description}
+            />
           ))}
         </div>
       </section>
