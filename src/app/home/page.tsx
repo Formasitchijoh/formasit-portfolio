@@ -12,6 +12,9 @@ import { TypeAnimation } from "react-type-animation";
 import ViewMore from "../components/Buttons/viewMore";
 import BlogPost from "../components/blog/blog";
 import { BlogData } from "../utils/data";
+import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
+import { ScrollButton } from "../components/Buttons/viewMore";
+
 const HomePage = () => {
   const socialIcons = [
     { icon: "/icons/github.png", name: "github" },
@@ -22,20 +25,23 @@ const HomePage = () => {
   const projectImages = ["/construction.PNG", "/home.JPG"];
   const blogImages = ["/course1.jpg", "/course2.jpg", "/cat8.jpg"];
   return (
-    <main className=" bg-[#1E1917] md:pb-10 md:px-[5%]">
+    <main className=" bg-[#1E1917] md:pb-10 md:px-[3%]">
       <section className="w-full h-[80vh] md:h-[100vh] flex flex-col-reverse justify-center items-center md:flex-row gap-2 ">
         <div
           id="intro-text"
           className=" px-[5%] md:px-0 w-full h-full md:w-1/2 mt-2 hidden  md:flex flex-col  justify-center gap-5 items-start"
         >
-          <Threelines />
-          <p
-            className={`text-white md:w-3/4 text-[16px] md:text-[24px] font-bold inline-block ${roboto_condensed.className}`}
-          >
-            I DEVELOPE SUSTAINABLE AND SCALABLE APPLICATIONS, THAT IS USER
-            FRIENDLY AND VERY SECURE AND TURN THEM INTO PROFITABLE VENTURES THAT
-            THRIVE
-          </p>
+          <div>
+            <Threelines />
+            <p
+              className={`text-white pt-4 md:w-3/4 text-[16px] md:text-[24px] font-bold inline-block ${roboto_condensed.className}`}
+            >
+              I DEVELOPE SUSTAINABLE AND SCALABLE APPLICATIONS, THAT IS USER
+              FRIENDLY AND VERY SECURE AND TURN THEM INTO PROFITABLE VENTURES
+              THAT THRIVE
+            </p>
+          </div>
+
           <div
             id="social-icons"
             className=" hidden md:flex  flex-col h-1/2 justify-center items-center gap-10"
@@ -49,6 +55,10 @@ const HomePage = () => {
                 height={30}
               />
             ))}
+            <div className="flex animate-bounce justify-center justify-items-stretch">
+              <ScrollButton />
+              {/* <span className="text-white">Scroll Me</span> */}
+            </div>
           </div>
         </div>
         <div
@@ -59,7 +69,7 @@ const HomePage = () => {
             FRONTEND
           </p>
           <div
-            className="w-[100%]  relative md:w-[100%] h-[80vh]  sm:h-[100vh] md:h-full bg-no-repeat bg-cover"
+            className="w-[100%]  relative md:w-[100%] h-[80vh]  sm:h-[100vh] md:h-[55%] bg-no-repeat bg-cover"
             style={{ backgroundImage: "url(/formasit.png)" }}
           >
             <div
@@ -69,19 +79,16 @@ const HomePage = () => {
               <p className="inline-block w-[80%]  text-[49px]  text-[#D2BEA5]">
                 FRONTEND
               </p>
-              <div
-                id="social-icons"
-                className="flex flex-col justify-around items-center gap-5"
-              >
-                {socialIcons.map((socialIcon, index) => (
-                  <Image
-                    key={index}
-                    src={socialIcon.icon}
-                    alt={socialIcon.name}
-                    width={30}
-                    height={30}
-                  />
-                ))}
+              <div id="social-icons" className="">
+                <div className="flex flex-col justify-end items-center gap-8 pt-2">
+                  <FaGithub className=" text-white" width={20} height={20} />
+                  <FaLinkedin className=" text-white" width={20} height={20} />
+                  <FaTwitter className=" text-white" width={20} height={20} />
+                  <div className="flex animate-bounce justify-center justify-items-stretch">
+                    <ScrollButton />
+                    {/* <span className="text-white">Scroll Me</span> */}
+                  </div>
+                </div>
               </div>
               <div className=" w-full flex justify-end items-end">
                 <p className="  md:-ml-[250px] text-[49px] md:text-[64px]  text-[#D2BEA5]">
@@ -99,9 +106,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="w-full pb-[40%] pt-[40%] md:pt-[20%] justify-start  items-start flex flex-col md:justify-center md:items-center px-[5%]">
-        <div className="flex w-full mb-10  place-content-center">
-          <h2 className=" text-[64px] text-white ">I AM</h2>
+      <section className="w-full justify-start bg-[#28211f] my-[10%] md:my-0 py-10  items-start flex flex-col md:justify-center md:items-center px-[5%]">
+        <div className="flex w-full mb-10 place-content-center">
+          <h2 className=" text-5xl text-white ">I AM</h2>
         </div>
         <div className="w-full flex place-items-start">
           <Threelines />
@@ -118,20 +125,29 @@ const HomePage = () => {
           <Threelines />
         </div>
       </section>
+      {/* <section className="grid grid-cols-3 my-5">
+
+      <div
+            className="w-[100%] relative md:w-[100%] h-[80vh]  sm:h-[100vh] md:h-[100vh]  bg-no-repeat bg-cover"
+            style={{ backgroundImage: "url(/forma2.jpeg)" }}
+          >
+    </div>
+
+      </section> */}
 
       <Services />
 
       <div className="w-full mt-[10%] px-5">
         <div className="flex w-full py-10 place-content-center">
-          <p className=" text-[64px] text-white ">MY WORK</p>
+          <p className=" text-[32px] md:text-[64px] text-white ">MY WORK</p>
         </div>
         <div className="gap-5  grid md:grid-cols-2 ">
           <ProductPage image="construction.PNG" />
           <ProductPage image="home.JPG" />
         </div>
-        <div className="flex animate-bounce w-full justify-end items-center py-2 h-[20vh]">
+        {/* <div className="flex animate-bounce w-full justify-end items-center py-2 h-[20vh]">
           <ViewMore />
-        </div>
+        </div> */}
       </div>
       <section className="w-full mt-[5%] px-5">
         <div className="flex w-full py-3 place-content-center">

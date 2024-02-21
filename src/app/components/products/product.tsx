@@ -13,7 +13,7 @@ type ProjectType = {
 const ProductPage = ({ image }: ProjectType) => {
   return (
     <div
-      className="p-5 h-[25vh] md:h-[50vh] group relative bg-no-repeat bg-cover"
+      className="p-5 h-[50vh] md:h-[75vh] group relative bg-no-repeat bg-cover"
       style={{
         backgroundImage: `url(/${image})`,
       }}
@@ -46,7 +46,7 @@ export const Project = (project: ProjectEntity) => {
         backgroundImage: `url(/${project.image})`,
       }}
     >
-      <div className="overlay  absolute top-0 left-0 h-full w-full bg-[#1E1917] bg-opacity-90 hidden  group-hover:flex group-hover:flex-col  group-hover:bg-opacity-80 transition-all duration-500">
+      <div className="overlay  absolute top-0 left-0 h-full w-full bg-[#1E1917] bg-opacity-99 hidden  group-hover:flex group-hover:flex-col  group-hover:bg-opacity-90 transition-all duration-500">
         <div className="flex h-15 w-full  justify-end items-end py-5 px-[2%] gap-2">
           <Link
             href={"#"}
@@ -69,7 +69,7 @@ export const Project = (project: ProjectEntity) => {
               {project.title}
             </h3>
             <p
-              className={`text-white text-justify py-2 text-[12px] md:text-[16px] ${roboto.className}`}
+              className={`text-white text-justify py-2 text-[12px] md:text-[12px] ${roboto.className}`}
             >
               {project.description}
             </p>

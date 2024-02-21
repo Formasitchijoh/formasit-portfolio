@@ -14,7 +14,7 @@ type BlogEntity = {
 const BlogPost = ({ image, title, description }: BlogEntity) => {
   return (
     <main
-      className={`bg-[#8a756c] rounded-tr-2xl rounded-bl-2xl group/link hover:bg-[#b6aaa5] ${roboto.className} flex flex-col  bg-opacity-30 p-[2%]`}
+      className={`bg-[#4a4a4a] group-hover/link:transition-all group-hover/link:duration-700 rounded-tr-2xl rounded-bl-2xl group/link hover:bg-[#b6aaa5] ${roboto.className} flex flex-col  bg-opacity-30 p-[2%]`}
     >
       <div
         className="p-5 h-[25vh] md:h-[50vh] group relative bg-no-repeat bg-cover"
@@ -23,10 +23,10 @@ const BlogPost = ({ image, title, description }: BlogEntity) => {
         }}
       ></div>
 
-      <h1 className="text-[16px] group-hover/link:text-[#1E1917] text-white pt-2">
+      <h2 className=" text-sm md:text-md  group-hover/link:text-[#1E1917] font-bold text-[#D2BEA5] pt-2">
         {title}
-      </h1>
-      <p className="text-[10px] group-hover/link:text-[#1E1917] py-2 text-white ">
+      </h2>
+      <p className="text-xs group-hover/link:text-[#1E1917] py-3 text-white ">
         {description}
       </p>
       <hr className="bg-[#D2BEB5] " />
@@ -51,12 +51,12 @@ const BlogPost = ({ image, title, description }: BlogEntity) => {
           />
           <ul>
             <li
-              className={` text-[8px] group-hover/link:text-[#1E1917] whitespace-nowrap md:text-[8px] text-white ${roboto.className}`}
+              className={` text-xs md:text-md  group-hover/link:text-[#1E1917] whitespace-nowrap md:text-[8px] text-white ${roboto.className}`}
             >
-              FORMASIT CHIJOH .F
+              Formasit Chijoh
             </li>
             <li
-              className={` text-[5px] group-hover/link:text-[#1E1917] whitespace-nowrap md:text-[5] text-white ${roboto.className}`}
+              className={` text-[10px] group-hover/link:text-[#1E1917] whitespace-nowrap md:text-[5] text-white ${roboto.className}`}
             >
               Software Engineer
             </li>

@@ -1,6 +1,6 @@
 import React from "react";
 import { roboto } from "@/app/utils/fonts";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon, ArrowDownIcon } from "@heroicons/react/24/solid";
 const ViewMore = () => {
   return (
     <button
@@ -16,3 +16,17 @@ const ViewMore = () => {
 };
 
 export default ViewMore;
+
+export const ScrollButton = () => {
+  return (
+    <button
+      className={`${roboto.className} text-white transition-all duration-200 transform-all font-bold text-[14px]  rounded-full flex justify-center items-center bg-[#D87C4F]`}
+    >
+      <ArrowDownIcon
+        width={30}
+        height={20}
+        className="text-white  font-bold h-16 text-[20px]"
+      />
+    </button>
+  );
+};

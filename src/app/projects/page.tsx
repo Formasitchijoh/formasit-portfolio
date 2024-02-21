@@ -7,7 +7,7 @@ import { Todo } from "../utils/Schema";
 
 const Projects = () => {
   const todo = Todo.find();
-  console.log(todo);
+  console.log(`value of the query\n`, todo);
 
   return (
     <main className=" bg-[#1E1917] md:pb-10 md:px-[5%]">

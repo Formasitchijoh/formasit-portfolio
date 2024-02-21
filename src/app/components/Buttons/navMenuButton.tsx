@@ -10,7 +10,7 @@ type ButtonProps = {
 const Button = ({ icon, text }: ButtonProps) => {
   return (
     <button
-      className={`${roboto.className} text-white my-2 font-bold text-[14px] rounded-full p-[14px] flex justify-center place-items-center bg-[#D87C4F] w-[185] h-[90]`}
+      className={`${roboto.className} text-white my-2  text-[12px] rounded-full p-[14px] flex justify-center place-items-center bg-[#D87C4F] w-[185]`}
     >
       {text} {icon ? <FaDownload className="text-white ml-2" /> : ""}
     </button>
