@@ -125,15 +125,58 @@ const HomePage = () => {
           <Threelines />
         </div>
       </section>
-      {/* <section className="grid grid-cols-3 my-5">
-
-      <div
-            className="w-[100%] relative md:w-[100%] h-[80vh]  sm:h-[100vh] md:h-[100vh]  bg-no-repeat bg-cover"
-            style={{ backgroundImage: "url(/forma2.jpeg)" }}
-          >
-    </div>
-
-      </section> */}
+      <section className="h-[100vh] w-full py-5">
+        <div className="grid grid-cols-2 w-full h-full gap-2 bg-purple-600">
+          <div className="relative flex items-center justify-center w-full h-full">
+            <Image
+              src={`/forma2.jpeg`}
+              alt="img1"
+              width={100}
+              height={100}
+              style={{
+                width: "50vw",
+                height: "100%",
+              }}
+            />
+          </div>
+          <div className="relative flex items-center justify-center w-full h-full">
+            <Image
+              src={`/forma1.jpg`}
+              alt="img2"
+              width={100}
+              height={100}
+              style={{
+                width: "50vw",
+                height: "100%",
+              }}
+            />
+          </div>
+          <div className="relative flex items-center justify-center w-full h-full">
+            <Image
+              src={`/forma2.jpeg`}
+              alt="img3"
+              width={100}
+              height={100}
+              style={{
+                width: "50vw",
+                height: "100%",
+              }}
+            />
+          </div>
+          <div className="relative flex items-center justify-center w-full h-full">
+            <Image
+              src={`/forma3.jpg`}
+              alt="img4"
+              width={100}
+              height={100}
+              style={{
+                width: "50vw",
+                height: "100%",
+              }}
+            />
+          </div>
+        </div>
+      </section>
 
       <Services />
 

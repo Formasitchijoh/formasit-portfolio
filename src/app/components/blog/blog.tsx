@@ -23,10 +23,14 @@ const BlogPost = ({ image, title, description }: BlogEntity) => {
         }}
       ></div>
 
-      <h2 className=" text-sm md:text-md  group-hover/link:text-[#1E1917] font-bold text-[#D2BEA5] pt-2">
+      <h2
+        className={` ${roboto.className} text-sm md:text-md  group-hover/link:text-[#1E1917] font-bold text-[#D2BEA5] py-4`}
+      >
         {title}
       </h2>
-      <p className="text-xs group-hover/link:text-[#1E1917] py-3 text-white ">
+      <p
+        className={`text-xs group-hover/link:text-[#1E1917] py-3 text-white ${roboto.className}`}
+      >
         {description}
       </p>
       <hr className="bg-[#D2BEB5] " />
@@ -51,12 +55,12 @@ const BlogPost = ({ image, title, description }: BlogEntity) => {
           />
           <ul>
             <li
-              className={` text-xs md:text-md  group-hover/link:text-[#1E1917] whitespace-nowrap md:text-[8px] text-white ${roboto.className}`}
+              className={` text-[8px] group-hover/link:text-[#1E1917] whitespace-nowrap  text-white ${roboto.className}`}
             >
               Formasit Chijoh
             </li>
             <li
-              className={` text-[10px] group-hover/link:text-[#1E1917] whitespace-nowrap md:text-[5] text-white ${roboto.className}`}
+              className={` text-[8px]  group-hover/link:text-[#1E1917] whitespace-nowrap  text-white ${roboto.className}`}
             >
               Software Engineer
             </li>

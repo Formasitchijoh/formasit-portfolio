@@ -46,10 +46,7 @@ const NavBar = () => {
         <div className=" hidden md:flex w-[80%] justify-between items-center">
           <ul className=" w-[70%]  justify-center items-center flex gap-10">
             {menuItem.map((item, index) => (
-              <li
-                className=" text-[16px] text-white"
-                key={index}
-              >
+              <li className=" text-[16px] text-white" key={index}>
                 <Link href={item.link}>{item.title}</Link>
               </li>
             ))}

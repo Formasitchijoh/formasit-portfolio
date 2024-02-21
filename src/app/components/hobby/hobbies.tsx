@@ -14,20 +14,32 @@ const Hobbies = () => {
       </div>
       <div className=" flex flex-col  justify-start items-start md:flex-row md:mx-auto w-[90%] py-10 md:justify-between md:items-center">
         <div className="flex gap-2 justify-center items-center">
-          <BiLaptop  className="text-[#1E1917] text-2xl md:text-5xl" width={50} height={50}/>
+          <BiLaptop
+            className="text-[#1E1917] text-2xl md:text-5xl"
+            width={50}
+            height={50}
+          />
           <h2 className={`text-white text-[32px] md:text-[64px] ${roboto}`}>
             CODE
           </h2>
         </div>
         <div className="flex gap-2 justify-center items-center">
-          <FaRunning className="text-[#1E1917] text-2xl md:text-5xl" width={50} height={50}/>
+          <FaRunning
+            className="text-[#1E1917] text-2xl md:text-5xl"
+            width={50}
+            height={50}
+          />
 
           <h2 className={`text-white text-[32px] md:text-[64px] ${roboto}`}>
             RUN
           </h2>
         </div>
         <div className="flex gap-2 justify-center items-center">
-          <GiCook className="text-[#1E1917] text-2xl md:text-5xl" width={50} height={50}/>
+          <GiCook
+            className="text-[#1E1917] text-2xl md:text-5xl"
+            width={50}
+            height={50}
+          />
 
           <h2 className={`text-white text-[32px] md:text-[64px] ${roboto}`}>
             COOK
