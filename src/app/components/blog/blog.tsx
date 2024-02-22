@@ -24,7 +24,7 @@ const BlogPost = ({ image, title, description }: BlogEntity) => {
       ></div>
 
       <h2
-        className={` ${roboto.className} text-sm md:text-md  group-hover/link:text-[#1E1917] font-bold text-[#D2BEA5] py-4`}
+        className={` ${roboto.className} text-sm md:text-md  group-hover/link:text-[#1E1917] font-bold text-[#D2BEA5]  py-4`}
       >
         {title}
       </h2>

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
@@ -9,7 +10,8 @@ const Contact = () => {
         <p
           className={`text-white text-[32px]  md:text-[64px] ${roboto_condensed.className}`}
         >
-          LETS CONNECT
+          <em className="text-[32px] md:text-[64px] text-[#D2BEA5]">#</em> let's
+          connect
         </p>
       </div>
       <div

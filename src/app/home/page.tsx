@@ -14,6 +14,7 @@ import BlogPost from "../components/blog/blog";
 import { BlogData } from "../utils/data";
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { ScrollButton } from "../components/Buttons/viewMore";
+import Button from "../components/Buttons/navMenuButton";
 
 const HomePage = () => {
   const socialIcons = [
@@ -57,36 +58,31 @@ const HomePage = () => {
             ))}
             <div className="flex animate-bounce justify-center justify-items-stretch">
               <ScrollButton />
-              {/* <span className="text-white">Scroll Me</span> */}
             </div>
           </div>
         </div>
         <div
           id="user"
-          className=" w-full md:w-1/2 h-full  md:h-full flex flex-col justify-start mt-20 items-end"
+          className=" w-full md:w-1/2 h-full  md:h-full flex flex-col justify-start mt-5  items-end"
         >
-          <p className=" hidden md:inline-block w-[80%] justify-start -mb-[50%] absolute md:relative md:-mb-0  items-start text-[49px] md:text-[64px] text-[#D2BEA5]">
-            FRONTEND
-          </p>
           <div
-            className="w-[100%]  relative md:w-[100%] h-[80vh]  sm:h-[100vh] md:h-[55%] bg-no-repeat bg-cover"
-            style={{ backgroundImage: "url(/formasit.png)" }}
+            className="w-[100%]  relative md:w-[100%] h-[80vh]  sm:h-[100vh] md:h-[85%] bg-no-repeat bg-cover"
+            style={{ backgroundImage: "url(/chijoh.jpg)" }}
           >
             <div
               id="mobile-screen"
-              className=" px-[5%]  bg-[#1E1917] bg-opacity-50 md:bg-opacity-10 md:hidden w-full h-full flex flex-col justify-between items-start"
+              className=" px-[5%]  bg-[#1E1917] bg-opacity-50 md:bg-opacity-10  w-full h-full flex flex-col justify-between items-start"
             >
               <p className="inline-block w-[80%]  text-[49px]  text-[#D2BEA5]">
                 FRONTEND
               </p>
-              <div id="social-icons" className="">
+              <div id="social-icons" className=" md:hidden">
                 <div className="flex flex-col justify-end items-center gap-8 pt-2">
                   <FaGithub className=" text-white" width={20} height={20} />
                   <FaLinkedin className=" text-white" width={20} height={20} />
                   <FaTwitter className=" text-white" width={20} height={20} />
                   <div className="flex animate-bounce justify-center justify-items-stretch">
                     <ScrollButton />
-                    {/* <span className="text-white">Scroll Me</span> */}
                   </div>
                 </div>
               </div>
@@ -97,37 +93,37 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className=" hidden  w-full md:flex h-1/4  justify-start  items-start">
-            <p className="justify-start items-start md:-ml-[150px] text-[49px] md:text-[64px]  text-[#D2BEA5]">
-              ENGINEER
-            </p>
+      <section className="w-full flex justify-center bg-[#7b6e69] py-10  items-center gap-2 flex-col">
+        <div className="w-full justify-start  mt-[10%] md:my-0  items-start flex flex-col md:justify-center md:items-center px-[5%]">
+          <div className="flex w-full mb-10 place-content-center">
+            <h2 className=" text-5xl text-white ">
+              <em className="text-[32px] md:text-[64px] text-[#D2BEA5]">#</em> i
+              am
+            </h2>
+          </div>
+          <div className="w-full flex place-items-start">
+            <Threelines />
+          </div>
+          <p
+            className={`text-white text-[16px] my-5 text-center md:text-[32px] font-bold inline-block ${roboto_condensed.className}`}
+          >
+            A FULLSTACK SOFTWARE ENGINEER AND MOBILE APP DEVELOPER.WITH A FIRM
+            QUEST TO BUILD SOLUTIONS THAT HELP HUMANITY AND BRING HOPE AND FAITH
+            TO MANKIND
+          </p>
+
+          <div className="w-full flex place-content-end">
+            <Threelines />
           </div>
         </div>
+        <Button text="ABOUT ME" />
       </section>
-
-      <section className="w-full justify-start bg-[#28211f] my-[10%] md:my-0 py-10  items-start flex flex-col md:justify-center md:items-center px-[5%]">
-        <div className="flex w-full mb-10 place-content-center">
-          <h2 className=" text-5xl text-white ">I AM</h2>
-        </div>
-        <div className="w-full flex place-items-start">
-          <Threelines />
-        </div>
-        <p
-          className={`text-white text-[16px] my-5 text-center md:text-[32px] font-bold inline-block ${roboto_condensed.className}`}
-        >
-          A FULLSTACK SOFTWARE ENGINEER AND MOBILE APP DEVELOPER.A FULLSTACK
-          SOFTWARE ENGINEER AND MOBILE APP DEVELOPER A FULLSTACK SOFTWARE
-          ENGINEER AND MOBILE APP DEVELOPER
-        </p>
-
-        <div className="w-full flex place-content-end">
-          <Threelines />
-        </div>
-      </section>
-      <section className="h-[100vh] w-full py-5">
+      {/* <section className="h-[100vh] w-full py-5">
         <div className="grid grid-cols-2 w-full h-full gap-2 bg-purple-600">
-          <div className="relative flex items-center justify-center w-full h-full">
+          <div className="relative flex items-center justify-center h-full">
             <Image
               src={`/forma2.jpeg`}
               alt="img1"
@@ -139,7 +135,7 @@ const HomePage = () => {
               }}
             />
           </div>
-          <div className="relative flex items-center justify-center w-full h-full">
+          <div className="relative flex items-center justify-center  h-full">
             <Image
               src={`/forma1.jpg`}
               alt="img2"
@@ -151,7 +147,7 @@ const HomePage = () => {
               }}
             />
           </div>
-          <div className="relative flex items-center justify-center w-full h-full">
+          <div className="relative flex items-center justify-center h-full">
             <Image
               src={`/forma2.jpeg`}
               alt="img3"
@@ -163,7 +159,7 @@ const HomePage = () => {
               }}
             />
           </div>
-          <div className="relative flex items-center justify-center w-full h-full">
+          <div className="relative flex items-center justify-center  h-full">
             <Image
               src={`/forma3.jpg`}
               alt="img4"
@@ -176,13 +172,16 @@ const HomePage = () => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Services />
 
       <div className="w-full mt-[10%] px-5">
         <div className="flex w-full py-10 place-content-center">
-          <p className=" text-[32px] md:text-[64px] text-white ">MY WORK</p>
+          <p className=" text-[32px] md:text-[64px] text-white ">
+            <em className="text-[32px] md:text-[64px] text-[#D2BEA5]">#</em> my
+            projects
+          </p>
         </div>
         <div className="gap-5  grid md:grid-cols-2 ">
           <ProductPage image="construction.PNG" />
@@ -194,7 +193,10 @@ const HomePage = () => {
       </div>
       <section className="w-full mt-[5%] px-5">
         <div className="flex w-full py-3 place-content-center">
-          <p className=" md:text-[64px] text-[32px] text-white ">INTERESTS</p>
+          <p className=" md:text-[64px] text-[32px] text-white ">
+            <em className="text-[32px] md:text-[64px] text-[#D2BEA5]">#</em> my
+            works
+          </p>
         </div>
         <div className=" grid md:grid-cols-3 gap-5">
           {BlogData.slice(0, 3).map((blog, index) => (

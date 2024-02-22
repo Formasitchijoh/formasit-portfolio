@@ -12,7 +12,8 @@ const Services = () => {
     <div className="w-full flex flex-col justify-center md:my-[10%] items-center px-[5%]">
       <div className="flex w-full mb-5 place-content-center">
         <p className=" text-[32px] text-center md:text-[64px] text-white ">
-          YOU CAN TRUST ME WITH
+          <em className="text-[32px] md:text-[64px] text-[#D2BEA5]">#</em> you
+          can trust me with
         </p>
       </div>
       {servicedata.map((service, index) => (
