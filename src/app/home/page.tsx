@@ -121,58 +121,6 @@ const HomePage = () => {
         </div>
         <Button text="ABOUT ME" />
       </section>
-      {/* <section className="h-[100vh] w-full py-5">
-        <div className="grid grid-cols-2 w-full h-full gap-2 bg-purple-600">
-          <div className="relative flex items-center justify-center h-full">
-            <Image
-              src={`/forma2.jpeg`}
-              alt="img1"
-              width={100}
-              height={100}
-              style={{
-                width: "50vw",
-                height: "100%",
-              }}
-            />
-          </div>
-          <div className="relative flex items-center justify-center  h-full">
-            <Image
-              src={`/forma1.jpg`}
-              alt="img2"
-              width={100}
-              height={100}
-              style={{
-                width: "50vw",
-                height: "100%",
-              }}
-            />
-          </div>
-          <div className="relative flex items-center justify-center h-full">
-            <Image
-              src={`/forma2.jpeg`}
-              alt="img3"
-              width={100}
-              height={100}
-              style={{
-                width: "50vw",
-                height: "100%",
-              }}
-            />
-          </div>
-          <div className="relative flex items-center justify-center  h-full">
-            <Image
-              src={`/forma3.jpg`}
-              alt="img4"
-              width={100}
-              height={100}
-              style={{
-                width: "50vw",
-                height: "100%",
-              }}
-            />
-          </div>
-        </div>
-      </section> */}
 
       <Services />
 
