@@ -31,10 +31,11 @@ const Projects = () => {
       </section>
       <motion.div
         ref={ref}
-        style={{
-          scale: scrollYProgress,
-          opacity: scrollYProgress,
-        }}
+        // style={{
+        //   scale: scrollYProgress,
+        //   opacity: scrollYProgress,
+
+        // }}
         className=" bg-[#1E1917] w-full mt-[10%] md:pb-10 md:px-[5%]"
       >
         <div className="gap-y-20 grid ">

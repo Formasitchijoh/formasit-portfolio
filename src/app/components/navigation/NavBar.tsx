@@ -12,6 +12,7 @@ const NavBar = () => {
   };
   const menuItem = [
     { title: "Home", link: "/home" },
+    { title: "About", link: "/about" },
     { title: "Contact", link: "/contact" },
     { title: "Project", link: "/projects" },
     { title: "Blog", link: "/blogs" },
