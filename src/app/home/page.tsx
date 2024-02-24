@@ -15,6 +15,7 @@ import { BlogData } from "../utils/data";
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { ScrollButton } from "../components/Buttons/viewMore";
 import Button from "../components/Buttons/navMenuButton";
+import Link from "next/link";
 
 const HomePage = () => {
   const socialIcons = [
@@ -119,7 +120,9 @@ const HomePage = () => {
             <Threelines />
           </div>
         </div>
-        <Button text="ABOUT ME" />
+        <Link href={"/about"}>
+          <Button text="ABOUT ME" />
+        </Link>
       </section>
 
       <Services />

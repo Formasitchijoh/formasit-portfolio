@@ -21,18 +21,20 @@ const NavBar = () => {
     <header className="w-full bg-[#1E1917] py-[1%] px-[5%] relative">
       <nav className="w-full flex justify-between items-center">
         <div className="w-[20%] justify-start items-center flex gap-2">
-          <Image
-            className="rounded-full "
-            width={40}
-            height={40}
-            alt="logo-image"
-            src="/formasit.png"
-          />
-          <p
-            className={` text-[8px] whitespace-nowrap md:text-[12px] text-white ${roboto.className}`}
-          >
-            Formasit Chijoh .F
-          </p>
+          <Link href={"/"}>
+            <Image
+              className="rounded-full "
+              width={40}
+              height={40}
+              alt="logo-image"
+              src="/formasit.png"
+            />
+            <p
+              className={` text-[8px] whitespace-nowrap md:text-[12px] text-white ${roboto.className}`}
+            >
+              Formasit Chijoh .F
+            </p>
+          </Link>
         </div>
         <button
           onClick={handleShowMenu}

@@ -13,6 +13,23 @@ import { BiChevronDown } from "react-icons/bi";
 import { TechnologyTag } from "../components/tag/blogTag";
 const About = () => {
   const [showSkills, setShowSkills] = useState(false);
+  const [showFramework, setShowFramework] = useState(false);
+  const [showDatabase, setShowDatabase] = useState(false);
+  const handleShowSkills = () => {
+    setShowSkills(!showSkills);
+    setShowFramework(false);
+    setShowDatabase(false);
+  };
+  const handleShowFramework = () => {
+    setShowSkills(false);
+    setShowFramework(!showFramework);
+    setShowDatabase(false);
+  };
+  const handleShowDatabase = () => {
+    setShowSkills(false);
+    setShowFramework(false);
+    setShowDatabase(!showDatabase);
+  };
   return (
     <main className="w-[100vw] bg-[#1E1917] ">
       <div className="w-[100vw] bg-[#1E1917] pt-10 h-[100vh]">
@@ -70,7 +87,7 @@ const About = () => {
           {/* language */}
           <hr className="w-full bg-[#D2BEA5] transition-all ease-in-out duration-1000" />
           <div
-            onClick={() => setShowSkills(!showSkills)}
+            onClick={handleShowSkills}
             className="w-[90%] py-10 text-white mx-auto flex"
           >
             <div
@@ -146,7 +163,7 @@ const About = () => {
 
           {/* frameworks */}
           <div
-            onClick={() => setShowSkills(!showSkills)}
+            onClick={handleShowFramework}
             className="w-[90%] py-10 text-white mx-auto flex"
           >
             <div
@@ -158,7 +175,7 @@ const About = () => {
                 <BiChevronDown className="text-white w-5" />
               </span>
             </div>
-            {showSkills && (
+            {showFramework && (
               <div id="items" className="w-1/2 grid grid-cols-2 gap-10">
                 <div className="flex flex-col gap-2">
                   <div
@@ -216,7 +233,7 @@ const About = () => {
 
           {/* Databases */}
           <div
-            onClick={() => setShowSkills(!showSkills)}
+            onClick={handleShowDatabase}
             className="w-[90%] py-10 text-white mx-auto flex"
           >
             <div
@@ -228,7 +245,7 @@ const About = () => {
                 <BiChevronDown className="text-white w-5" />
               </span>
             </div>
-            {showSkills && (
+            {showDatabase && (
               <div id="items" className="w-1/2 grid grid-cols-2 gap-10">
                 <div className="flex flex-col gap-2">
                   <div
@@ -314,7 +331,7 @@ const About = () => {
                   technologies
                 </h2>
               </div>
-              <div className="flex-wrap place-items-center gap-2">
+              <div className="flex-wrap md:flex w-full place-items-center gap-2">
                 <TechnologyTag tag="React" />
                 <TechnologyTag tag="React Native" />
                 <TechnologyTag tag="Next Js" />
