@@ -2,6 +2,10 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import Button from "../Buttons/navMenuButton";
+import { FaCross } from "react-icons/fa";
+import { GiCrossMark } from "react-icons/gi";
+import { BiCross } from "react-icons/bi";
+import { XMarkIcon } from "@heroicons/react/24/solid";
 const NavMenu = ({
   setShowMenu,
 }: {
@@ -9,6 +13,7 @@ const NavMenu = ({
 }) => {
   const menuItem = [
     { title: "HOME", link: "/home" },
+    { title: "ABOUT", link: "/about" },
     { title: "CONTACT", link: "/contact" },
     { title: "MY WORK", link: "/projects" },
     { title: "BLOG", link: "/blogs" },
@@ -22,13 +27,7 @@ const NavMenu = ({
         onClick={handleShowMenu}
         className="w-full h-[20%] flex justify-end items-center"
       >
-        <Image
-          className="text-white"
-          src="/icons/cross.png"
-          alt=""
-          width={50}
-          height={50}
-        />
+        <XMarkIcon className="text-white" width={50} height={50} />
       </div>
       <div className=" w-full justify-center items-center flex">
         <ul className=" text-left w-full md:w-1/4 justify-start items-start flex flex-col gap-3">

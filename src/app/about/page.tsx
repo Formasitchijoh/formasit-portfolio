@@ -51,7 +51,7 @@ const About = () => {
         </div>
       </div>
 
-      <section className="w-[90%] mx-auto">
+      <section className="w-[90%]  h-[50vh] mx-auto">
         <div className="flex w-[80%] mx-auto place-content-start py-5">
           <h2 className=" text-5xl text-white ">
             <em className="text-[32px] md:text-[64px] text-[#D2BEA5]">#</em>{" "}
@@ -76,7 +76,7 @@ const About = () => {
         </div>
       </section>
 
-      <section id="skills" className="">
+      <section id="skills" className=" my-10">
         <div className="flex w-[80%] mx-auto place-content-center py-10">
           <h2 className=" text-5xl text-white ">
             <em className="text-[32px] md:text-[64px] text-[#D2BEA5]">#</em> my
@@ -288,14 +288,14 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-10" id="Work Experience">
+      <section className="py-20" id="Work Experience">
         <div className="flex w-full place-content-center py-5">
           <h2 className=" text-5xl text-white ">
             <em className="text-[32px] md:text-[64px] text-[#D2BEA5]">#</em> my
             experience
           </h2>
         </div>
-        <div className="flex flex-col w-[100%] md:w-[80%] mx-auto">
+        <div className="flex flex-col w-[100%] mx-auto">
           <div className="flex px-5 md:w-[80%] mx-auto gap-5 my-10">
             <div className=" flex flex-col gap-2 md:justify-center w-1/4 md:w-1/2 md:items-center">
               <div className=" flex gap-2 justify-center w-full items-center">

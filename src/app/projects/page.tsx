@@ -29,14 +29,14 @@ const Projects = () => {
           </h1>
         </div>
       </section>
-      <motion.div
+      <div
         ref={ref}
         // style={{
         //   scale: scrollYProgress,
         //   opacity: scrollYProgress,
 
         // }}
-        className=" bg-[#1E1917] w-full mt-[10%] md:pb-10 md:px-[5%]"
+        className=" bg-[#1E1917] w-full md:py-20 md:px-[5%]"
       >
         <div className="gap-y-20 grid ">
           <Project
@@ -50,7 +50,7 @@ const Projects = () => {
             description={projects[0].description}
           />
         </div>
-      </motion.div>
+      </div>
     </main>
   );
 };

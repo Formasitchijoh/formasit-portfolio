@@ -18,7 +18,7 @@ const ProductPage = ({ image }: ProjectType) => {
         backgroundImage: `url(/${image})`,
       }}
     >
-      <div className="overlay  items-center justify-center absolute top-0 left-0 h-full w-full bg-[#1E1917] bg-opacity-80 hidden  group-hover:flex  group-hover:bg-opacity-80 transition-all duration-500">
+      <div className="overlay  items-center justify-center absolute top-0 left-0 h-full w-full bg-[#1E1917] bg-opacity-80 hidden  group-hover:flex  group-hover:bg-opacity-80 transition-all duration-700">
         <Link
           href={"#"}
           className="md:h-14 md:w-14 h-8 w-8 mr-2 border-2 relative flex justify-center items-center rounded-full border-[#ADB7BE] hover:border-white"

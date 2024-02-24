@@ -27,14 +27,13 @@ const Blogs = () => {
         className=" h-[25vh] md:h-[80vh] group relative bg-no-repeat bg-cover"
         style={{ backgroundImage: "url(/b.jpg)" }}
       ></section>
-      <div className="bg-[#1E1917] flex  justify-center items-center h-full  bg-opacity-40">
-        <h1
-          className={`md:text-[32px] text-[24px] text-white ${roboto_condensed.className}`}
-        >
-          I WRITE ABOUT
-        </h1>
+      <div className="flex w-full py-10 place-content-center">
+        <p className=" text-[32px] md:text-[64px] text-white ">
+          <em className="text-[32px] md:text-[64px] text-[#D2BEA5]">#</em> I
+          WRITE ABOUT
+        </p>
       </div>
-      <div className="bg-[#1E1917] flex py-[5%] flex-wrap justify-center w-[70%] gap-3 mx-auto md:w-full md:gap-10 items-center h-full  bg-opacity-40">
+      <div className="bg-[#1E1917] flex py-[5%] flex-wrap justify-center w-[90%] gap-3 mx-auto md:w-full md:gap-10 items-center h-full  bg-opacity-40">
         {blogCategory.map((category, index) => (
           <BlogTag
             onClick={handleTagChange}
@@ -44,7 +43,7 @@ const Blogs = () => {
           />
         ))}
       </div>
-      <div className="grid w-[90%] mx-auto md:w-full md:grid-cols-3 gap-5">
+      <div className="grid w-[90%] mx-auto md:w-full md:grid-cols-3 sm:grid-cols-2 gap-5">
         {filteredBlog.map((blog, index) => (
           <BlogPost
             key={index}
@@ -54,7 +53,7 @@ const Blogs = () => {
           />
         ))}
       </div>
-      <div className=" w-full py-[20%] block justify-center items-center">
+      {/* <div className=" w-full py-[20%] block justify-center items-center">
         <div className="flex w-[50%] mx-auto mb-10  place-content-center">
           <h2 className=" text-[32px] text-white ">
             LIKE WHAT YOU SEE
@@ -68,7 +67,7 @@ const Blogs = () => {
           </div>
           <ViewMore />
         </div>
-      </div>
+      </div> */}
     </main>
   );
 };

@@ -16,14 +16,16 @@ const Services = () => {
           can trust me with
         </p>
       </div>
-      {servicedata.map((service, index) => (
-        <ServiceItem
-          key={index}
-          number={service.number}
-          title={service.title}
-          description={service.description}
-        />
-      ))}
+      <div className="w-full grid lg:grid-cols-2 pt-10">
+        {servicedata.map((service, index) => (
+          <ServiceItem
+            key={index}
+            number={service.number}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
+      </div>
     </div>
   );
 };
@@ -32,7 +34,7 @@ export default Services;
 
 const ServiceItem = (service: ServiceType) => {
   return (
-    <div className="w-full group/link hover:bg-[#D2BEB5] px-1 md:py-5 flex justify-center items-center gap-5 md:gap-10 my-[5%] h-[25%]">
+    <div className="w-full group/link hover:bg-[#D2BEB5] px-1 md:py-10 transition-all duration-700 flex justify-center items-center gap-5 md:gap-10 h-[80%]">
       <div className=" group-hover/link:text-[#1E1917] text-[#D87C4F] pt-6 md:mt-0 flex  h-[15vh] md:h-[25vh] justify-center md:items-center text-[32px] md:text-[96px]">
         <p>0</p>
         <p>{service.number}</p>
