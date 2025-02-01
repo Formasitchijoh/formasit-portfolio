@@ -1,20 +1,28 @@
+/* styles.module.css */
+
 .marquee {
   overflow: hidden;
+  position: relative;
   width: 100%;
 }
 
 .marqueeContent {
   display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  animation: marquee 20s ease-in-out infinite alternate;
+  align-items: center;
+  /* Ensure the content is in one line */
+  white-space: nowrap;
+  /* Animation to scroll from right to left */
+  transition: marquee 5s linear infinite;
+  animation: marquee 5s linear infinite;
 }
 
+/* The animation starts with the content fully to the right (100%) 
+   and ends with it completely off to the left (-100%) */
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }

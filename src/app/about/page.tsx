@@ -32,7 +32,7 @@ const About = () => {
   };
   return (
     <main className="w-[100vw] bg-[#1E1917] ">
-      <div className="w-[100vw] bg-[#1E1917] pt-10 h-[100vh]">
+      {/* <div className="w-[100vw] bg-[#1E1917] pt-10 h-[100vh]">
         <div className=" md:flex md:w-[90%] mx-auto  h-2/3  gap-20 ">
           <div
             className="skew-y-6 md:w-[50%] h-full bg-cover bg-no-repeat"
@@ -49,23 +49,23 @@ const About = () => {
             style={{ backgroundImage: "url(/forma1.jpg)" }}
           ></div>
         </div>
-      </div>
+      </div> */}
 
-      <section className="w-[90%]  h-[50vh] mx-auto">
+      <section className="w-[90%] pt-4 mx-auto">
         <div className="flex w-[80%] mx-auto place-content-start py-5">
-          <h2 className=" text-5xl text-white ">
+          <h2 className=" text-3xl  md:text-5xl text-white ">
             <em className="text-[32px] md:text-[64px] text-[#D2BEA5]">#</em>{" "}
             formasit chijoh
           </h2>
         </div>
-        <div className="w-[80%] text-white mx-auto py-10 flex">
-          <div className="w-1/2 flex justify-start items-start gap-2">
-            <h2 className="text-2xl text-[#D2BEA5]">
-              A creative and dedicated <br /> software developer
+        <div className="w-[80%] text-white mx-auto py-2 md:py-10 md:flex">
+          <div className="md:w-1/2 flex justify-start items-start gap-2">
+            <h2 className=" test-xl text-bold md:text-2xl text-[#D2BEA5]">
+              A creative and dedicated software developer
             </h2>
           </div>
 
-          <div className="w-1/2">
+          <div className="md:w-1/2 mt-4 md:mt-0">
             <p className={`md:text-sm  text-xs text-left ${roboto.className}`}>
               I believe in making a meaningful impact is what fuels my
               enthusiaxs for software development. I believe in the power of
@@ -76,9 +76,9 @@ const About = () => {
         </div>
       </section>
 
-      <section id="skills" className=" my-10">
-        <div className="flex w-[80%] mx-auto place-content-center py-10">
-          <h2 className=" text-5xl text-white ">
+      <section id="skills" className="my-10">
+        <div className="flex w-[80%] mx-auto place-content-center py-4 md:py-10">
+          <h2 className=" text-5xl text-white mb-4 ">
             <em className="text-[32px] md:text-[64px] text-[#D2BEA5]">#</em> my
             skills
           </h2>
@@ -88,30 +88,30 @@ const About = () => {
           <hr className="w-full bg-[#D2BEA5] transition-all ease-in-out duration-1000" />
           <div
             onClick={handleShowSkills}
-            className="w-[90%] py-10 text-white mx-auto flex"
+            className="w-[90%] py-10 text-white mx-auto md:flex"
           >
             <div
               id="language"
               className="w-1/2 flex justify-start items-start gap-2"
             >
-              <span>Language</span>
+              <span>Languages</span>
               <span>
                 <BiChevronDown className="text-white w-5" />
               </span>
             </div>
             {showSkills && (
-              <div id="items" className="w-1/2 grid grid-cols-2 gap-10">
+              <div id="items" className=" w-full md:w-1/2 mt-4 grid grid-cols-2 gap-10">
                 <div className="flex flex-col gap-2">
                   <div
                     id="language-name"
-                    className="w-1/2 flex justify-start items-start gap-2"
+                    className="w-1/2 flex justify-start items-center md:items-start gap-2"
                   >
                     <span>
                       <BsSquareFill className="text-[#D2BEA5] w-5" />
                     </span>
                     <span className={`text-md ${roboto.className}`}>Java</span>
                   </div>
-                  <p className={`text-xs  text-left ${roboto.className}`}>
+                  <p className={`text-[12px] md:text-xs  text-left ${roboto.className}`}>
                     make a meaningful impact is what fuels my enthusiaxs for
                     software development. I believe in the power of
                     well-designed software to transform the way we work,
@@ -121,7 +121,7 @@ const About = () => {
                 <div className="flex flex-col gap-2">
                   <div
                     id="language-name"
-                    className="w-1/2 flex justify-start items-start gap-2"
+                    className="w-1/2 flex justify-start items-center md:items-start gap-2"
                   >
                     <span>
                       <BsSquareFill className="text-[#D2BEA5] w-5" />
@@ -130,7 +130,7 @@ const About = () => {
                       JavaScript
                     </span>
                   </div>
-                  <p className={`text-xs text-left ${roboto.className}`}>
+                  <p className={`text-[12px] md:text-xs  text-left ${roboto.className}`}>
                     make a meaningful impact is what fuels my enthusiaxs for
                     software development. I believe in the power of
                     well-designed software to transform the way we work,
@@ -140,7 +140,7 @@ const About = () => {
                 <div className="flex flex-col gap-2">
                   <div
                     id="language-name"
-                    className="w-1/2 flex justify-start items-start gap-2"
+                    className="w-1/2 flex justify-start items-center md:items-start gap-2"
                   >
                     <span>
                       <BsSquareFill className="text-[#D2BEA5] w-5" />
@@ -149,7 +149,7 @@ const About = () => {
                       TypeScript
                     </span>
                   </div>
-                  <p className={`text-xs  text-left ${roboto.className}`}>
+                  <p className={`text-[12px] md:text-xs  text-left ${roboto.className}`}>
                     make a meaningful impact is what fuels my enthusiaxs for
                     software development. I believe in the power of
                     well-designed software to transform the way we work,
@@ -164,7 +164,7 @@ const About = () => {
           {/* frameworks */}
           <div
             onClick={handleShowFramework}
-            className="w-[90%] py-10 text-white mx-auto flex"
+            className="w-[90%] py-10 text-white mx-auto md:flex"
           >
             <div
               id="language"
@@ -176,18 +176,18 @@ const About = () => {
               </span>
             </div>
             {showFramework && (
-              <div id="items" className="w-1/2 grid grid-cols-2 gap-10">
+              <div id="items" className=" w-full md:w-1/2 mt-4 grid grid-cols-2 gap-10">
                 <div className="flex flex-col gap-2">
                   <div
                     id="language-name"
-                    className="w-1/2 flex justify-start items-start gap-2"
+                    className="w-1/2 flex justify-start items-center md:items-start gap-2"
                   >
                     <span>
                       <BsSquareFill className="text-[#D2BEA5] w-5" />
                     </span>
                     <span className={`text-md ${roboto.className}`}>React</span>
                   </div>
-                  <p className={`text-xs  text-left ${roboto.className}`}>
+                  <p className={`text-[12px] md:text-xs  text-left ${roboto.className}`}>
                     make a meaningful impact is what fuels my enthusiaxs for
                     software development. I believe in the power of
                   </p>
@@ -195,7 +195,7 @@ const About = () => {
                 <div className="flex flex-col gap-2">
                   <div
                     id="language-name"
-                    className="w-1/2 flex justify-start items-start gap-2"
+                    className="w-1/2 flex justify-start items-center md:items-start gap-2"
                   >
                     <span>
                       <BsSquareFill className="text-[#D2BEA5] w-5" />
@@ -204,7 +204,7 @@ const About = () => {
                       React Native
                     </span>
                   </div>
-                  <p className={`text-xs text-left ${roboto.className}`}>
+                  <p className={`text-[12px] md:text-xs  text-left ${roboto.className}`}>
                     make a meaningful impact is what fuels my enthusiaxs for
                     software development. and experience the world
                   </p>
@@ -212,7 +212,7 @@ const About = () => {
                 <div className="flex flex-col gap-2">
                   <div
                     id="language-name"
-                    className="w-1/2 flex justify-start items-start gap-2"
+                    className="w-1/2 flex justify-start items-center md:items-start gap-2"
                   >
                     <span>
                       <BsSquareFill className="text-[#D2BEA5] w-5" />
@@ -221,7 +221,7 @@ const About = () => {
                       Express
                     </span>
                   </div>
-                  <p className={`text-xs  text-left ${roboto.className}`}>
+                  <p className={`text-[12px] md:text-xs  text-left ${roboto.className}`}>
                     I believe in the power of well-designed software to
                     transform the way we work, connect, and experience the world
                   </p>
@@ -234,7 +234,7 @@ const About = () => {
           {/* Databases */}
           <div
             onClick={handleShowDatabase}
-            className="w-[90%] py-10 text-white mx-auto flex"
+            className="w-[90%] py-10 text-white mx-auto md:flex"
           >
             <div
               id="language"
@@ -246,11 +246,11 @@ const About = () => {
               </span>
             </div>
             {showDatabase && (
-              <div id="items" className="w-1/2 grid grid-cols-2 gap-10">
+              <div id="items" className="w-full md:w-1/2 mt-4 grid grid-cols-2 gap-10">
                 <div className="flex flex-col gap-2">
                   <div
                     id="language-name"
-                    className="w-1/2 flex justify-start items-start gap-2"
+                    className="w-1/2 flex justify-start tems-center md:items-start gap-2"
                   >
                     <span>
                       <BsSquareFill className="text-[#D2BEA5] w-5" />
@@ -259,7 +259,7 @@ const About = () => {
                       PostgresSql
                     </span>
                   </div>
-                  <p className={`text-xs  text-left ${roboto.className}`}>
+                  <p className={`text-[12px] md:text-xs  text-left ${roboto.className}`}>
                     make a meaningful impact is what fuels my enthusiaxs for
                     software development. I believe in the power of
                   </p>
@@ -267,7 +267,7 @@ const About = () => {
                 <div className="flex flex-col gap-2">
                   <div
                     id="language-name"
-                    className="w-1/2 flex justify-start items-start gap-2"
+                    className="w-1/2 flex justify-start items-center md:items-start gap-2"
                   >
                     <span>
                       <BsSquareFill className="text-[#D2BEA5] w-5" />
@@ -276,7 +276,7 @@ const About = () => {
                       MongoDB
                     </span>
                   </div>
-                  <p className={`text-xs text-left ${roboto.className}`}>
+                  <p className={`text-[12px] md:text-xs  text-left ${roboto.className}`}>
                     make a meaningful impact is what fuels my enthusiaxs for
                     software development. and experience the world
                   </p>
@@ -312,13 +312,13 @@ const About = () => {
                 className="w-1/2 flex justify-start text-white items-start gap-2"
               >
                 <span
-                  className={`text-md whitespace-nowrap ${roboto.className}`}
+                  className={`text-md text-primary font-bold whitespace-nowrap ${roboto.className}`}
                 >
                   Tech Chantier
                 </span>
               </div>
               <p
-                className={`text-[10px] md:text-xs text-white text-left ${roboto.className}`}
+                className={`text-[12px] md:text-xs text-white text-left ${roboto.className}`}
               >
                 make a meaningful impact is what fuels my enthusiaxs for
                 software development. I believe in the power of well-designed
@@ -355,13 +355,13 @@ const About = () => {
                 className="w-1/2 flex justify-start text-white items-start gap-2"
               >
                 <span
-                  className={`text-md whitespace-nowrap ${roboto.className}`}
+                  className={`text-md text-primary font-bold whitespace-nowrap ${roboto.className}`}
                 >
                   Digital Renter
                 </span>
               </div>
               <p
-                className={`text-[10px] md:text-xs text-white text-left ${roboto.className}`}
+                className={`text-[12px] md:text-xs text-white text-left ${roboto.className}`}
               >
                 make a meaningful impact is what fuels my enthusiaxs for
                 software development. I believe in the power of well-designed
@@ -369,7 +369,7 @@ const About = () => {
                 the world
               </p>
               <div className="flex w-full place-content-start">
-                <h2 className=" text-md text-[#D2BEA5] ">
+                <h2 className=" text-lg text-[#D2BEA5] ">
                   <em className="text-[32px] md:text-lg text-[#D2BEA5]">#</em>{" "}
                   technologies
                 </h2>
