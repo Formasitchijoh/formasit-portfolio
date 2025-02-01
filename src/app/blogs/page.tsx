@@ -5,6 +5,7 @@ import BlogPost from "../components/blog/blog";
 import ViewMore from "../components/Buttons/viewMore";
 import { BlogData } from "../utils/data";
 import BlogTag from "../components/tag/blogTag";
+import Link from "next/link";
 const Blogs = () => {
   const [tag, setTag] = useState("Technology");
   const handleTagChange = (newTag: string) => {
@@ -45,15 +46,16 @@ const Blogs = () => {
       </div>
       <div className="grid w-[90%] mx-auto md:w-full md:grid-cols-3 sm:grid-cols-2 gap-5">
         {filteredBlog.map((blog, index) => (
+          <Link  key={index}  href={`/blogs/${index}`}>
           <BlogPost
-            key={index}
             image={blogImages[index]}
             title={blog.title}
             description={blog.description}
           />
+          </Link>
         ))}
       </div>
-      {/* <div className=" w-full py-[20%] block justify-center items-center">
+      <div className=" w-full py-[20%] block justify-center items-center">
         <div className="flex w-[50%] mx-auto mb-10  place-content-center">
           <h2 className=" text-[32px] text-white ">
             LIKE WHAT YOU SEE
@@ -67,7 +69,7 @@ const Blogs = () => {
           </div>
           <ViewMore />
         </div>
-      </div> */}
+      </div>
     </main>
   );
 };

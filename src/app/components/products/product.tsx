@@ -8,9 +8,11 @@ import { ProjectEntity } from "@/app/utils/entities";
 import { roboto } from "@/app/utils/fonts";
 type ProjectType = {
   image: string;
+  githubUrl?:string;
+  deployedUrl?:string
 };
 
-const ProductPage = ({ image }: ProjectType) => {
+const ProductPage = ({ image, githubUrl,deployedUrl }: ProjectType) => {
   return (
     <div
       className="p-5 h-[50vh] md:h-[75vh] group relative bg-no-repeat bg-cover"
@@ -20,13 +22,13 @@ const ProductPage = ({ image }: ProjectType) => {
     >
       <div className="overlay  items-center justify-center absolute top-0 left-0 h-full w-full bg-[#1E1917] bg-opacity-80 hidden  group-hover:flex  group-hover:bg-opacity-80 transition-all duration-700">
         <Link
-          href={"#"}
+          href={githubUrl as string}
           className="md:h-14 md:w-14 h-8 w-8 mr-2 border-2 relative flex justify-center items-center rounded-full border-[#ADB7BE] hover:border-white"
         >
           <CodeBracketIcon className="md:h-10 h-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-10 w-5 text-[#ADB7BE] cursor-pointer" />
         </Link>
         <Link
-          href={"#"}
+          href={deployedUrl as string}
           className="md:h-14 md:w-14 h-8 w-8 mr-2 border-2 relative flex justify-center items-center rounded-full border-[#ADB7BE] hover:border-white"
         >
           <EyeIcon className="md:h-10 h-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-10 w-5 text-[#ADB7BE] cursor-pointer" />
@@ -40,6 +42,8 @@ export default ProductPage;
 
 export const Project = (project: ProjectEntity) => {
   return (
+  <Link href={`/projects/${project.projectId}`}>
+    
     <div
       className="p-5  h-[50vh] md:h-[80vh] group relative bg-no-repeat bg-cover"
       style={{
@@ -77,5 +81,6 @@ export const Project = (project: ProjectEntity) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };

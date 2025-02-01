@@ -22,7 +22,7 @@ const NavMenu = ({
     setShowMenu(false);
   };
   return (
-    <div className=" absolute z-50 inset-0 w-[100vw] px-[5%] h-screen bg-[#1E1917]">
+    <div className="absolute z-50 inset-0 w-[100vw] px-[5%] h-screen bg-[#1E1917]">
       <div
         onClick={handleShowMenu}
         className="w-full h-[20%] flex justify-end items-center"

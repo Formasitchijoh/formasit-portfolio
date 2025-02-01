@@ -43,11 +43,14 @@ const Projects = () => {
             image="construction.PNG"
             title={projects[0].title}
             description={projects[0].description}
+            projectId={0}
           />
           <Project
             image="home.JPG"
             title={projects[1].title}
             description={projects[0].description}
+            projectId={1}
+
           />
         </div>
       </div>

@@ -93,7 +93,7 @@ const HomePage = () => {
         >
           <div
             className="w-[100%]  relative md:w-[100%] h-[80vh]  sm:h-[100vh] md:h-[85%] bg-no-repeat bg-cover"
-            style={{ backgroundImage: "url(/chijoh.jpg)" }}
+            style={{ backgroundImage: "url(/chijoh1.png)" }}
           >
             <div
               id="mobile-screen"
@@ -171,8 +171,8 @@ const HomePage = () => {
           </p>
         </div>
         <div className="gap-5  grid md:grid-cols-2 ">
-          <ProductPage image="construction.PNG" />
-          <ProductPage image="home.JPG" />
+          <ProductPage githubUrl="https://e-construct-client.vercel.app/" deployedUrl="https://github.com/Formasitchijoh/e-construct-client" image="construction.PNG" />
+          <ProductPage githubUrl="https://github.com/Formasitchijoh" deployedUrl="https://github.com/Formasitchijoh" image="home.JPG" />
         </div>
         {/* <div className="flex animate-bounce w-full justify-end items-center py-2 h-[20vh]">
           <ViewMore />

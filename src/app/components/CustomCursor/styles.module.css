@@ -1,0 +1,13 @@
+/* Smooth custom cursor */
+  .customcursor {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #D87C4F;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease-out;
+    transform: translate(-50%, -50%);
+  }
+  

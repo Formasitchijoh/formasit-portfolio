@@ -35,7 +35,7 @@ export default Services;
 const ServiceItem = (service: ServiceType) => {
   return (
     <div className="w-full group/link hover:bg-[#D2BEB5] px-1 md:py-10 transition-all duration-700 flex justify-center items-center gap-5 md:gap-10 h-[80%]">
-      <div className=" group-hover/link:text-[#1E1917] text-[#D87C4F] pt-6 md:mt-0 flex  h-[15vh] md:h-[25vh] justify-center md:items-center text-[32px] md:text-[96px]">
+      <div className=" group-hover/link:text-[#1E1917] text-primary pt-6 md:mt-0 flex  h-[15vh] md:h-[25vh] justify-center md:items-center text-[32px] md:text-[96px]">
         <p>0</p>
         <p>{service.number}</p>
       </div>

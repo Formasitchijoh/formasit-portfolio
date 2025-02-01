@@ -3,4 +3,5 @@ export type ProjectEntity = {
   image?: string;
   category?: string;
   description?: string;
+  projectId:number
 };
